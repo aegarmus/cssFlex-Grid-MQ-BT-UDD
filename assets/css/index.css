@@ -22,16 +22,23 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: center;
 }
 
 .logo {
     color: var(--secondary-color-700);
 }
 
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+}
 
 .nav-item {
     list-style: none;
+    transition: .3s;
 }
 
 .nav-item a {
@@ -39,8 +46,35 @@
     text-decoration: none;
 }
 
+.nav-item:hover {
+    transform: scale(1.06);
+    text-shadow: 0 0 10px var(--secondary-color-500);
+}
+
 .btn {
     padding: .5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.btn-login {
+    background-color: var(--primary-color-300);
+    color: var(--primary-color-700);
+
+    font-weight: 900;
+
+}
+
+.btn-register {
+    background-color: var(--primary-color-700);
+    border: solid 2px var(--primary-color-300);
+
+    color: var(--primary-color-300);
+    font-weight: 900;
+}
+
+.btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 10px var(--secondary-color-500);
 }

@@ -9,7 +9,7 @@
     --primary-color-300: #09a0ec;
     --primary-color-500: #0d46ac;
     --primary-color-700: #0a3790;
-    
+
     --secondary-color-500: #f0f0f0;
     --secondary-color-700: #e0e0e0;
 
@@ -17,12 +17,14 @@
 }
 
 .navbar {
-    background-color: var(--primary-color-700); 
+    background-color: var(--primary-color-700);
     padding: 2rem;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    grid-area: navbar;
 }
 
 .logo {
@@ -87,67 +89,122 @@
     box-shadow: 0 0 10px var(--secondary-color-500);
 }
 
-/*Display Grids*/
-
-/*Grid tracks -> columnas y las filas -> estas para generar grillas*/
 .grid-layout {
     display: grid;
-    grid-template-columns: 20% 5fr 2fr;
-    grid-template-rows: auto 1fr auto;
-    
-    width: 60%;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto auto 1fr auto;
+
+    grid-template-areas: 
+        "navbar navbar"
+        "header header"
+        "aside main"
+        "footer footer";
 
     min-height: 100vh;
 }
 
-.grid-item-1 {
-    background-color: #ac4502;
-    padding: 1rem;
+.header-container {
+    background-color: #d1ec09;
+    padding: 2rem;
 
-    grid-column: 1/3;
-    grid-row: 1/3;
+    grid-area: header;
 }
 
-.grid-item-2 {
+.aside-section {
+    background-color: #a20dac;
+    padding: 2rem;
+
+    grid-area: aside;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.article-1 {
+    background-color: #0d46ac;
+    padding: 2rem;
+
+    height: 20%;
+    width: 80%;
+}
+
+.article-2 {
+    background-color: #ac0d0d;
+    padding: 2rem;
+
+    height: 20%;
+    width: 80%;
+}
+.article-3 {
+    background-color: #aca90d;
+    padding: 2rem;
+
+    height: 20%;
+    width: 80%;
+}
+
+.main-section {
+    background-color: #90e610;
+    padding: 2rem;
+
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    grid-template-areas: 
+        "section-1 section-1 section-1"
+        "section-2 section-3 section-4"
+        "section-5 section-5 section-5"
+    ;
+
+    gap: .5rem
+}
+
+.section-1 {
+    background-color: aliceblue;
+    padding: 1rem;
+
+    grid-area: section-1;
+}
+.section-2 {
     background-color: #f0a202;
     padding: 1rem;
+
+    grid-area: section-2;
 }
 
-.grid-item-3 {
+.section-3 {
     background-color: #ac45ac;
     padding: 1rem;
+
+    grid-area: section-3;
 }
 
-.grid-item-4 {
+.section-4 {
     background-color: #02ac45;
     padding: 1rem;
-}
 
-.grid-item-5 {
+    grid-area: section-4;
+}
+.section-5 {
     background-color: #02acac;
     padding: 1rem;
-}
-.grid-item-6 {
-    background-color: #64038a;
-    padding: 1rem;
+
+    grid-area: section-5;
 }
 
-.grid-item-7 {
-    background-color: #8a0303;
-    padding: 1rem;
+.footer-section {
+    background-color: #900a0a;
+    padding: 2rem;
+
+    grid-area: footer;
 }
-
-.grid-item-8 {
-    background-color: #8a8a03;
-    padding: 1rem;
-}
-
-.grid-item-9 {
-    background-color: #038a8a;
-    padding: 1rem;
-}
-
-
 
 @media(max-width: 780px) {
     .navbar {
@@ -169,7 +226,7 @@
 @media(max-width: 480px) {
     .btn-hamburger {
         display: block;
-        padding: .6rem 
+        padding: .6rem
     }
 
     .btn-hamburger:hover {

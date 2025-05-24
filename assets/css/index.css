@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color-300: #09a0ec;
+    --primary-color-500: #0d46ac;
+    --primary-color-700: #0a3790;
+    
+    --secondary-color-500: #f0f0f0;
+    --secondary-color-700: #e0e0e0;
+
+    --neutral-dark: #333333;
+}
+
+.navbar {
+    background-color: var(--primary-color-700); 
+    padding: 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.logo {
+    color: var(--secondary-color-700);
+}
+
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-item a {
+    color: var(--secondary-color-700);
+    text-decoration: none;
+}
+
+.btn {
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}

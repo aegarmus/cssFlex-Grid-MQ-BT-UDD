@@ -256,3 +256,39 @@
   -pantallas extra anchas -> min-width 1920px
   -pantallas extra grandes 4k -> min-width: 2560px    
 */
+
+
+/* color Hexadecimal 
+
+Se separa en 3 pares
+
+R - primer par -> Rojo
+G - segundo par -> Verde
+B - tercer par -> Azul
+A - Cuarto par -> Alpha -> nivel de transparencia
+
+el primer elemento del par evalua la intensidad del color
+el segundo elemento del par evalua la saturación de color
+
+ejemplo: #ff000095
+    el primer par es ff -> 255
+    el segundo par es 00 -> 0
+    el tercer par es 00 -> 0
+    el cuarto par es 95 -> 0.58 
+
+    el color resultante es rojo puro
+
+    ejemplo: 0f0a
+
+    asume que el primer par es 00
+    el segundo par es ff
+    el tercer par es 00
+    el cuarto o alpha es aa -> Nivel de transparencia
+
+rgb(0, 255, 0)
+
+rgba(0, 255, 0, 0.67)
+
+
+
+*/
